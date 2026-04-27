@@ -2,6 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- MUY IMPORTANTE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dalkomi - Regalos versión 2.0</title>
 
     <style>
@@ -13,105 +17,93 @@
         }
 
         header {
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.25);
             color: white;
             text-align: center;
-            padding: 25px;
-            animation: aparecer 1.5s ease-in-out;
+            padding: 25px 15px;
         }
 
-        /* LOGO */
         .logo-img {
-            width: 90px;
+            width: 85px;
             border-radius: 50%;
             margin-bottom: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            animation: flotar 3s ease-in-out infinite;
-        }
-
-        @keyframes flotar {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
         }
 
         header h1 {
             margin: 0;
-            font-size: 40px;
+            font-size: 32px;
         }
 
+        header p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* CONTENEDOR */
         .contenedor {
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* CLAVE */
+            align-items: center;
             gap: 20px;
-            padding: 40px;
-            flex-wrap: wrap;
+            padding: 20px 15px;
         }
 
+        /* TARJETAS */
         .producto {
-            background: rgba(255,255,255,0.9);
-            width: 280px;
+            background: rgba(255,255,255,0.95);
+            width: 100%;
+            max-width: 340px;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-            animation: aparecer 2s ease-in-out;
-        }
-
-        .producto:hover {
-            transform: scale(1.08);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
         }
 
         .producto h2 {
             color: #EA9087;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .producto p {
+            font-size: 17px;
+            margin-bottom: 15px;
         }
 
         .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 18px;
-            background: #8497B5;
+            display: block;
+            padding: 15px;
+            background: linear-gradient(45deg, #8497B5, #9D98AE);
             color: white;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 15px;
             font-weight: bold;
-            transition: 0.3s;
+            font-size: 16px;
         }
 
-        .btn:hover {
-            background: #9D98AE;
-            transform: scale(1.1);
-        }
-
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
+        /* PC / TABLET */
+        @media (min-width: 768px) {
+            .contenedor {
+                flex-direction: row;
+                justify-content: center;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .producto {
+                width: 260px;
             }
         }
 
-        /* Gomitas flotando */
+        /* Gomitas */
         .gomita {
             position: fixed;
             bottom: -10px;
-            font-size: 25px;
+            font-size: 20px;
             animation: subir 6s linear infinite;
         }
 
         @keyframes subir {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-800px);
-                opacity: 0;
-            }
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-800px); opacity: 0; }
         }
     </style>
 </head>
@@ -119,9 +111,7 @@
 <body>
 
 <header>
-    <!-- TU LOGO -->
     <img src="./logo.jpeg" alt="Logo Dalkomi" class="logo-img">
-
     <h1>Dalkomi</h1>
     <p><strong>Regalos versión 2.0</strong></p>
 </header>
@@ -148,7 +138,7 @@
 
 </div>
 
-<!-- Gomitas flotando -->
+<!-- Gomitas -->
 <div class="gomita" style="left:10%;">🍬</div>
 <div class="gomita" style="left:25%; animation-delay:1s;">🍭</div>
 <div class="gomita" style="left:40%; animation-delay:2s;">🍬</div>
