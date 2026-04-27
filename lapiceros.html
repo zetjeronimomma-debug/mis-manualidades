@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lapiceros Personalizados - Dalkomi</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #EFAF96, #EA9087, #CB8D9A, #9D98AE, #8497B5);
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            margin: 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: white;
+            font-size: 40px;
+            text-shadow: 2px 2px 5px black;
+            animation: aparecer 2s ease-in-out;
+        }
+
+        p {
+            font-size: 20px;
+            color: white;
+            animation: aparecer 3s ease-in-out;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: rgba(255,255,255,0.9);
+            margin: 10px auto;
+            padding: 12px;
+            width: 260px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 8px gray;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            background-color: #8497B5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #9D98AE;
+            transform: scale(1.1);
+        }
+
+        img {
+            margin: 10px;
+            border-radius: 12px;
+            transition: transform 0.4s;
+        }
+
+        img:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        /* Animación de entrada */
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Corazones */
+        .corazon {
+            position: fixed;
+            bottom: -10px;
+            color: pink;
+            font-size: 20px;
+            animation: subir 5s linear infinite;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lapiceros Personalizados</h1>
+
+    <img src="images.jpg" width="200">
+    <img src="ceros.jpg" width="200">
+
+    <p>Lapiceros únicos con separadores incluidos.</p>
+
+    <ul>
+        <li>Diseños personalizados</li>
+        <li>Colores a elección</li>
+        <li>Perfectos para regalo</li>
+    </ul>
+
+    <a href="dalkomi.html">Volver</a>
+
+    <!-- Corazones flotando -->
+    <div class="corazon" style="left:10%;">💖</div>
+    <div class="corazon" style="left:30%; animation-delay:1s;">💗</div>
+    <div class="corazon" style="left:50%; animation-delay:2s;">💖</div>
+    <div class="corazon" style="left:70%; animation-delay:3s;">💗</div>
+    <div class="corazon" style="left:90%; animation-delay:4s;">💖</div>
+
+</body>
+</html>

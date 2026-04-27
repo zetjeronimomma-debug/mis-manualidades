@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dalkomi - Regalos versión 2.0</title>
+
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            background: linear-gradient(135deg, #EFAF96, #EA9087, #CB8D9A, #9D98AE, #8497B5);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0,0,0,0.2);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            animation: aparecer 1.5s ease-in-out;
+        }
+
+        /* LOGO */
+        .logo-img {
+            width: 90px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            animation: flotar 3s ease-in-out infinite;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            background: rgba(255,255,255,0.9);
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            animation: aparecer 2s ease-in-out;
+        }
+
+        .producto:hover {
+            transform: scale(1.08);
+        }
+
+        .producto h2 {
+            color: #EA9087;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 18px;
+            background: #8497B5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #9D98AE;
+            transform: scale(1.1);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gomitas flotando */
+        .gomita {
+            position: fixed;
+            bottom: -10px;
+            font-size: 25px;
+            animation: subir 6s linear infinite;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!-- TU LOGO -->
+    <img src="./logo.jpeg" alt="Logo Dalkomi" class="logo-img">
+
+    <h1>Dalkomi</h1>
+    <p><strong>Regalos versión 2.0</strong></p>
+</header>
+
+<div class="contenedor">
+
+    <div class="producto">
+        <h2>Lapiceros Personalizados</h2>
+        <p>Incluyen separadores únicos y diseños creativos.</p>
+        <a class="btn" href="lapiceros.html">Comprar</a>
+    </div>
+
+    <div class="producto">
+        <h2>Gomitas Enchiladas</h2>
+        <p>El equilibrio perfecto entre dulce y picante.</p>
+        <a class="btn" href="gomitas.html">Comprar</a>
+    </div>
+
+    <div class="producto">
+        <h2>Letras con Gomitas</h2>
+        <p>Personaliza nombres con dulces deliciosos.</p>
+        <a class="btn" href="letras.html">Comprar</a>
+    </div>
+
+</div>
+
+<!-- Gomitas flotando -->
+<div class="gomita" style="left:10%;">🍬</div>
+<div class="gomita" style="left:25%; animation-delay:1s;">🍭</div>
+<div class="gomita" style="left:40%; animation-delay:2s;">🍬</div>
+<div class="gomita" style="left:60%; animation-delay:3s;">🍭</div>
+<div class="gomita" style="left:80%; animation-delay:4s;">🍬</div>
+
+</body>
+</html>

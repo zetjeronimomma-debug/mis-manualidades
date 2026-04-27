@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Letras personalizadas - Dalkomi</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #EFAF96, #EA9087, #CB8D9A, #9D98AE, #8497B5);
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            margin: 0;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-shadow: 2px 2px 5px black;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* GALERÍA MÁS BONITA */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: rgba(255,255,255,0.9);
+            margin: 8px auto;
+            padding: 10px;
+            width: 90%;
+            max-width: 280px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 8px gray;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: linear-gradient(45deg, #8497B5, #9D98AE);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            transform: scale(1.08);
+        }
+
+        /* Gomitas */
+        .gomita {
+            position: fixed;
+            bottom: -10px;
+            font-size: 18px;
+            animation: subir 6s linear infinite;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+
+        /* TABLET Y PC */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(3, 200px);
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Letras personalizadas</h1>
+
+    <div class="galeria">
+        <img src="m.jpg">
+        <img src="ku.jpg">
+        <img src="sp.jpg">
+    </div>
+
+    <p>Letras rellenas con gomitas super deliciosas.</p>
+
+    <ul>
+        <li>Iniciales creativas</li>
+        <li>Variedad de dulces</li>
+        <li>Diseños creativos</li>
+    </ul>
+
+    <a href="dalkomi.html">Volver</a>
+
+    <!-- Gomitas flotando -->
+    <div class="gomita" style="left:10%;">🍬</div>
+    <div class="gomita" style="left:25%; animation-delay:1s;">🍭</div>
+    <div class="gomita" style="left:40%; animation-delay:2s;">🍬</div>
+    <div class="gomita" style="left:60%; animation-delay:3s;">🍭</div>
+    <div class="gomita" style="left:80%; animation-delay:4s;">🍬</div>
+
+</body>
+</html>

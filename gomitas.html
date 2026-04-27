@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CLAVE PARA CELULARES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gomitas Enchiladas - Dalkomi</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #EFAF96, #EA9087, #CB8D9A, #9D98AE, #8497B5);
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            margin: 10px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            text-shadow: 2px 2px 5px black;
+            animation: aparecer 2s ease-in-out;
+        }
+
+        p {
+            font-size: 16px;
+            color: white;
+            animation: aparecer 3s ease-in-out;
+            padding: 0 10px;
+        }
+
+        /* GALERÍA */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        img {
+            width: 90%;
+            max-width: 250px;
+            border-radius: 12px;
+            transition: transform 0.4s;
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: rgba(255,255,255,0.9);
+            margin: 10px auto;
+            padding: 10px;
+            width: 90%;
+            max-width: 280px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 8px gray;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #8497B5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        a:hover {
+            background-color: #9D98AE;
+            transform: scale(1.05);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gomitas flotando */
+        .gomita {
+            position: fixed;
+            bottom: -10px;
+            font-size: 20px;
+            animation: subir 6s linear infinite;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+
+        /* PANTALLAS GRANDES */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            img {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Gomitas Enchiladas</h1>
+
+    <div class="galeria">
+        <img src="go.jpg">
+        <img src="mit.jpg">
+        <img src="gomit.jpg">
+    </div>
+
+    <p>Mezcla deliciosa de dulces con chile.</p>
+
+    <ul>
+        <li>Diferentes sabores</li>
+        <li>Niveles de picante</li>
+        <li>Presentación especial</li>
+    </ul>
+
+    <a href="dalkomi.html">Volver</a>
+
+    <!-- Gomitas flotando -->
+    <div class="gomita" style="left:10%;">🍬</div>
+    <div class="gomita" style="left:25%; animation-delay:1s;">🍭</div>
+    <div class="gomita" style="left:40%; animation-delay:2s;">🍬</div>
+    <div class="gomita" style="left:60%; animation-delay:3s;">🍭</div>
+    <div class="gomita" style="left:80%; animation-delay:4s;">🍬</div>
+
+</body>
+</html>
