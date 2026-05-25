@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-
-    <!-- MUY IMPORTANTE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="logo.jpeg">
 
     <title>Dalkomi - Regalos versión 2.0</title>
 
@@ -17,93 +17,128 @@
         }
 
         header {
-            background: rgba(0,0,0,0.25);
+            background: rgba(0,0,0,0.2);
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 25px;
+            animation: aparecer 1.5s ease-in-out;
         }
 
         .logo-img {
-            width: 85px;
+            width: 90px;
             border-radius: 50%;
             margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            animation: flotar 3s ease-in-out infinite;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
 
         header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 40px;
         }
 
         header p {
             font-size: 18px;
-            margin-top: 5px;
         }
 
-        /* CONTENEDOR */
         .contenedor {
             display: flex;
-            flex-direction: column; /* CLAVE */
-            align-items: center;
+            justify-content: center;
             gap: 20px;
-            padding: 20px 15px;
+            padding: 40px;
+            flex-wrap: wrap;
         }
 
-        /* TARJETAS */
         .producto {
-            background: rgba(255,255,255,0.95);
-            width: 100%;
-            max-width: 340px;
+            background: rgba(255,255,255,0.9);
+            width: 280px;
             padding: 20px;
-            border-radius: 20px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            animation: aparecer 2s ease-in-out;
+        }
+
+        .producto:hover {
+            transform: scale(1.08);
         }
 
         .producto h2 {
             color: #EA9087;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .producto p {
-            font-size: 17px;
-            margin-bottom: 15px;
         }
 
         .btn {
-            display: block;
-            padding: 15px;
-            background: linear-gradient(45deg, #8497B5, #9D98AE);
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 18px;
+            background: #8497B5;
             color: white;
             text-decoration: none;
-            border-radius: 15px;
+            border-radius: 10px;
             font-weight: bold;
-            font-size: 16px;
+            transition: 0.3s;
         }
 
-        /* PC / TABLET */
-        @media (min-width: 768px) {
-            .contenedor {
-                flex-direction: row;
-                justify-content: center;
-            }
+        .btn:hover {
+            background: #9D98AE;
+            transform: scale(1.1);
+        }
 
-            .producto {
-                width: 260px;
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* Gomitas */
         .gomita {
             position: fixed;
             bottom: -10px;
-            font-size: 20px;
+            font-size: 25px;
             animation: subir 6s linear infinite;
         }
 
         @keyframes subir {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-800px); opacity: 0; }
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+
+        footer {
+            background: rgba(0,0,0,0.25);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        footer h3 {
+            margin-top: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -112,6 +147,7 @@
 
 <header>
     <img src="./logo.jpeg" alt="Logo Dalkomi" class="logo-img">
+
     <h1>Dalkomi</h1>
     <p><strong>Regalos versión 2.0</strong></p>
 </header>
@@ -119,26 +155,47 @@
 <div class="contenedor">
 
     <div class="producto">
-        <h2>Lapiceros Personalizados</h2>
-        <p>Incluyen separadores únicos y diseños creativos.</p>
-        <a class="btn" href="lapiceros.html">Comprar</a>
-    </div>
-
-    <div class="producto">
-        <h2>Gomitas Enchiladas</h2>
+        <h2>🍬 Gomitas Enchiladas</h2>
         <p>El equilibrio perfecto entre dulce y picante.</p>
         <a class="btn" href="gomitas.html">Comprar</a>
     </div>
 
     <div class="producto">
-        <h2>Letras con Gomitas</h2>
+        <h2>🔤 Letras con Gomitas</h2>
         <p>Personaliza nombres con dulces deliciosos.</p>
         <a class="btn" href="letras.html">Comprar</a>
     </div>
 
 </div>
 
-<!-- Gomitas -->
+<!-- Redes Sociales -->
+<footer>
+    <h3>📱 Síguenos en nuestras redes sociales</h3>
+
+    <p>
+        📘 <a href="https://facebook.com/dalkomi.gt" target="_blank">
+            Facebook: Dalkomi.gt
+        </a>
+    </p>
+
+    <p>
+        📷 <a href="https://instagram.com/dalkomi.gt" target="_blank">
+            Instagram: @dalkomi.gt
+        </a>
+    </p>
+
+    <p>
+        🎵 <a href="https://tiktok.com/@dalkomi.gt" target="_blank">
+            TikTok: @dalkomi.gt
+        </a>
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 Dalkomi | Regalos versión 2.0
+    </p>
+</footer>
+
+<!-- Gomitas flotando -->
 <div class="gomita" style="left:10%;">🍬</div>
 <div class="gomita" style="left:25%; animation-delay:1s;">🍭</div>
 <div class="gomita" style="left:40%; animation-delay:2s;">🍬</div>
